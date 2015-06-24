@@ -111,30 +111,30 @@
 							<form class="form-horizontal form-group-large" id="beta_signup_form" target="_self" onsubmit="" action="" method="post">
 								<div class="form-group">
 									<label for="first_name" class="three columns">First Name</label>
-									<input id="first_name" type="text" class="nine columns" name="first_name">
+									<input id="first_name" type="text" class="nine columns" name="first_name" required>
 								</div>
 								<div class="form-group">
 									<label for="last_name" class="three columns">Last Name</label>
-									<input id="last_name" type="text" class="nine columns" name="last_name">
+									<input id="last_name" type="text" class="nine columns" name="last_name" required>
 								</div>
 								<div class="form-group">
 									<label for="email" class="three columns">Email</label>
-									<input id="email" type="email" class="nine columns" name="email">
+									<input id="email" type="email" class="nine columns" name="email" required>
 								</div>
 								<div class="form-group">
 									<label for="institution" class="three columns">Institution</label>
-									<input id="institution" type="text" class="nine columns" name="institution">
+									<input id="institution" type="text" class="nine columns" name="institution" required>
 								</div>
 								<div class="form-group">
 									<label class="three columns">Academic Affiliation</label>
 									<div class="nine columns">
 										<div class="radio-group">
 											<div class="radio">
-												<input id="academic_use_yes" type="radio" class="radio" value="Yes" name="academic_use" checked>
+												<input id="academic_use_yes" type="radio" class="radio" value="Yes" name="academic_use" checked required>
 												<label for="academic_use_yes">Yes, I am affiliated with an academic institution and use of this beta software will be for academic purposes</label>
 											</div>
 											<div class="radio">
-												<input id="academic_use_no" type="radio" class="radio" value="No" name="academic_use">
+												<input id="academic_use_no" type="radio" class="radio" value="No" name="academic_use" required>
 												<label for="academic_use_no">No, I will be using this software for purposes other than academic</label>
 											</div>
 										</div>
@@ -212,11 +212,11 @@
                     statusCode: {
                         0: function() {
                             //Success message
-                            window.location.replace("file:///Volumes/Macintosh%20HD/Users/jwmay/Desktop/Developer/websites/chronusquantum/main/index.html");
+                            window.location.replace("http://jwmay.github.io/chronusq-site/");
                         },
                         200: function() {
                             //Success Message
-                            window.location.replace("file:///Volumes/Macintosh%20HD/Users/jwmay/Desktop/Developer/websites/chronusquantum/main/index.html");
+                            window.location.replace("http://jwmay.github.io/chronusq-site/");
                         }
                     }
                 });
