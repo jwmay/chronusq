@@ -1,0 +1,518 @@
+@import url("../font-awesome/css/font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Raleway:600,400,300");
+
+
+/* Table of Contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- For Style Guide Only
+- Global
+- Buttons
+- Cards
+- Media
+- Panels
+- Forms
+- Utilities
+
+- Header
+*/
+
+
+/* *** FOR STYLE GUIDE ONLY ***
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.example-grid .column,
+.example-grid .columns {
+  background: rgb(238, 238, 238);
+  text-align: center;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.example-panel {
+	background-color: #696969;
+	color: white;
+}
+
+pre.prettyprint {
+	border: none !important;
+}
+
+
+/* Global
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html, body {
+	height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+hr {
+	margin: 0.5rem 0;
+}
+
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	border-radius: 0;
+	margin: 0;
+	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
+	   -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
+	    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
+	     -o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
+	        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.button-light {
+	color: #fff !important;
+	border: 1px solid #fff !important;
+}
+
+	.button-light:hover {
+		color: #aaa !important;
+		border: 1px solid #aaa !important;
+	}
+
+.button-large,	
+.form-group-large button,
+.form-group-large .button,
+.form-group-large input[type="button"],
+.form-group-large input[type="submit"],
+.form-group-large input[type="reset"] {
+	font-size: 1.4em;
+	padding: 0.6em;
+	height: auto;
+}
+
+
+/* Cards
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card {
+	border: 1px solid #e4e4e4;
+	padding: 2em;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	-webkit-transition: all 250ms;
+	   -moz-transition: all 250ms;
+	        transition: all 250ms;
+}
+
+
+/* Media
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.media {
+	display: block;
+	width: 100%;
+	position: relative;
+	margin: 4em 0;
+}
+
+.media-left,
+.media-right {
+	display: inline-block;
+	max-width: 35%;
+	height: auto;
+	vertical-align: top;
+}	
+
+	.media-left img,
+	.media-right img {
+		width: 100%;
+	}
+
+.media-left {
+	margin-right: 0.8em;
+}
+
+.media-right {
+	margin-left: 0.8em;
+}
+
+.media-heading {
+	margin-top: 0;
+	margin-bottom: 0.25em;
+}
+
+.media-body {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 65%;
+}
+
+	.media-body p {
+		margin: 0;
+	}
+
+/* Phablet and smaller */
+@media (max-width: 550px) {
+	.media-body {
+		margin-top: 1em;
+	}
+}
+
+
+/* Panels
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section {
+	margin-top: 4rem;
+	margin-bottom: 4.5rem;
+}
+
+.panel {
+	padding: 6em 0;
+	width: 100%;
+}
+
+	.panel code {
+		padding: 0;
+		margin: 0;
+		background: none;
+		border: none;
+		border-radius: 0;
+	}
+
+/* Phablet and smaller */
+@media (max-width: 550px) {
+	.panel {
+		padding: 1em 0;
+	}
+}
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1 { margin-top: 3rem; }
+h2 { margin-top: 2.5rem; }
+h3 { margin-top: 2rem; }
+h4 { margin-top: 1.5rem; }
+h5 { margin-top: 1rem; }
+h6 { margin-top: 1rem; }
+
+.lead {
+	font-size: 1.4em;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+.rule:after {
+	content: "";
+	height: 1px;
+	width: 4em;
+	background: rgba(144,144,144,0.5);
+	display: block;
+	margin-top: 0.4em;
+}
+
+	.light-rule:after {
+		background: rgba(255,255,255,0.5);
+	}
+
+blockquote {
+	border-left: 5px solid rgba(144,144,144,0.5);
+	padding-left: 0.5em;
+}
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+fieldset {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+}
+
+legend {
+	font-size: 2.5em;
+	font-weight: 300;
+	margin-bottom: 0;
+}
+
+.form-group {
+	margin: 1em 0;
+}
+
+label {
+	font-size: 1.4em;
+	font-weight: 400;
+	line-height: 1.85;
+	cursor: pointer;
+	margin-bottom: 0;
+	display: inline-block;
+}	
+
+.help-block {
+	font-size: 1em;
+	font-weight: 300;
+	font-style: italic;
+	display: inline-block;
+}
+	
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+	border-radius: 0;
+	border: none;
+	background-color: #eee;
+	font-size: 1.4em;
+	font-weight: 300;
+	margin-bottom: 0;
+	padding: 0.5em;
+	width: 100%;
+	height: auto;
+}
+
+	input[type="email"]:focus,
+	input[type="number"]:focus,
+	input[type="search"]:focus,
+	input[type="text"]:focus,
+	input[type="tel"]:focus,
+	input[type="url"]:focus,
+	input[type="password"]:focus,
+	textarea:focus,
+	select:focus {
+		border: none;
+	}
+	
+select {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+
+.select-wrapper {
+	position: relative;
+}
+
+	.select-wrapper:before {
+		font-family: FontAwesome;
+		color: rgba(144, 144, 144, 0.5);
+		content: '\f078';
+		position: absolute;
+		text-align: center;
+		right: 2%;
+		top: 30%;
+	}
+	
+textarea {
+	height: auto;
+	resize: vertical;
+}
+
+.checkbox,
+.radio {
+	padding-left: 3.5em;
+	position: relative;
+}
+
+.checkbox-group .checkbox,
+.radio-group .radio {
+	margin-top: 0.75em;
+}
+
+/* Adds left margin (indent) to checkbox and radio elements that have a section label (header) */
+label ~ .checkbox-group,
+label ~ .radio-group {
+	padding-left: 1.5em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+
+	input[type="checkbox"] + label:before,
+	input[type="radio"] + label:before {
+		content: "";
+		display: inline-block;
+		height: 1.85em;
+		width: 1.85em;
+		background-color: #eee;
+		border: 1px solid #eee;
+		vertical-align: middle;
+		margin-right: 8px;
+		font-family: FontAwesome;
+		position: absolute;
+		top: -2px;
+		left: 0;
+	}
+
+	input[type="checkbox"]:checked + label:before,
+	input[type="radio"]:checked + label:before {
+		content: "\f00c";
+		text-align: center;
+		background-color: #666;
+		color: #fff;
+		border: 1px solid #666;
+	}
+
+	input[type="radio"] + label:before {
+		border-radius: 42px;
+	}
+
+.form-horizontal .form-group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.form-group-large {}
+
+	.form-group-large .form-group {
+		margin: 1.5em 0;
+		position: relative;
+	}
+	
+	.form-group-large label {
+		font-size: 1.6em;
+		padding: 0.6em 0;
+	}
+	
+	.form-group-large .help-block {
+		font-size: 1.2em;
+		position: absolute;
+		left: 0;
+		top: 2.8em;
+	}
+	
+	.form-group-large .checkbox-group .checkbox label,
+	.form-group-large .radio-group .radio label {
+		padding: 0;
+	}
+	
+	.form-group-large input[type="email"],
+	.form-group-large input[type="number"],
+	.form-group-large input[type="search"],
+	.form-group-large input[type="text"],
+	.form-group-large input[type="tel"],
+	.form-group-large input[type="url"],
+	.form-group-large input[type="password"],
+	textarea,
+	select {
+		font-size: 1.8em;
+		padding: 0.75em 1em;
+	}
+
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.block {
+	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+
+/* Custom Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.nav-btn {
+	margin: 2em 0;
+}
+
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+	background-image: url("../img/clock.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+	.header .panel {
+		margin-top: 0;
+		padding: 10em 0;
+		background-color: rgba(0,0,0,0.6);
+		text-align: center;
+		color: #fff;
+		height: 100%;
+	}
+	
+	.header h1 {
+		font-weight: 600;
+	}
+
+/* For tablets and smaller */
+@media (max-width: 750px) {
+
+	.header .panel {
+		padding: 3em 0;
+	}
+
+	.header img {
+		width: 180px;
+	}
+	
+	.header h1 {
+		margin: 0.5em 0;
+	}
+	
+	.header h5 {
+		font-size: 1.4rem;
+	}
+}
+
+
+/* About Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#about {
+	min-height: 100%;
+}
+
+
+/* Features Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#features {
+	background-image: linear-gradient(45deg, rgb(144,117,62), rgb(69,56,133));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	min-height: 100%;
+}
+
+	#features .panel {
+		color: #fff;
+		background-color: none;
+	}
+
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer {
+	background-image: url("../img/clock.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	height: 10em;
+}
+
+	.footer .inner {
+		background-color: rgba(0,0,0,0.8);
+		height: 100%;
+		padding: 2em 0;
+		color: #fff;
+	}
