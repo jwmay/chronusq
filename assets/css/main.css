@@ -76,9 +76,6 @@ input[type="reset"] {
 	border-radius: 0;
 	margin: 0;
 	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
-	   -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
-	    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
-	     -o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
 	        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
@@ -112,7 +109,6 @@ input[type="reset"] {
 	padding: 2em;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	-webkit-transition: all 250ms;
-	   -moz-transition: all 250ms;
 	        transition: all 250ms;
 }
 
@@ -241,7 +237,7 @@ blockquote {
 	line-height: 55px;
 	z-index: 100;
 	width: 100%;
-	position: fixed; /* change to 'fixed' for top static navbar and add 'top: 0px;' */
+	position: fixed;
 }
 
 	.navbar .container {
@@ -253,6 +249,11 @@ blockquote {
 	font-weight: 600;
 }
 
+	.navbar-header img {
+		margin: 10px 12px 14px 0;
+		vertical-align: middle;
+	}
+
 	.navbar-header a {
 		color: #fff;
 		text-decoration: none;
@@ -260,7 +261,7 @@ blockquote {
 	
 	.navbar-header a:hover,
 	.navbar-header a:focus {
-		color: #ccc;
+		opacity: 0.9;
 	}
 
 .hamburger {
@@ -322,9 +323,6 @@ blockquote {
 			margin: 0;
 			padding: 0;
 			-webkit-transition: background-color 0.2s ease-in-out;
-			   -moz-transition: background-color 0.2s ease-in-out;
-			    -ms-transition: background-color 0.2s ease-in-out;
-			     -o-transition: background-color 0.2s ease-in-out;
 			        transition: background-color 0.2s ease-in-out;
 		}
 		
@@ -347,7 +345,7 @@ blockquote {
 	}
 
 /* Larger than tablet */	
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 840px) {
 	.navbar-header {
 		font-size: 1.8em;
 		display: inline-block;
@@ -376,9 +374,6 @@ blockquote {
 				display: inline-block;
 				margin-right: 1.2em;
 				-webkit-transition: color 0.2s ease-in-out;
-				   -moz-transition: color 0.2s ease-in-out;
-				    -ms-transition: color 0.2s ease-in-out;
-				     -o-transition: color 0.2s ease-in-out;
 				        transition: color 0.2s ease-in-out;
 			}
 			
@@ -394,7 +389,7 @@ blockquote {
 				.navbar-nav ul li a:hover,
 				.navbar-nav ul li a:focus {
 					background: none;
-					color: #ccc;
+					opacity: 0.9;
 				}
 }
 
