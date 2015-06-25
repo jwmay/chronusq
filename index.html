@@ -13,8 +13,30 @@
 	</head>
 	
 	<body>
+		<!-- NAVBAR -------------------->
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#">Chronus Quantum</a>
+					<div class="hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="navbar-nav">
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#features">Features</a></li>
+						<li><a href="#beta_form">Beta Sign-up</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
 		<!-- HEADER SECTION -------------------->
 		<header class="header">
+			<div class="header-bg"></div>
 			<div class="panel">
 				<div class="container">
 					<img src="assets/img/chronus_quantum_logo.png">
@@ -140,7 +162,6 @@
 										</div>
 									</div>
 								</div>
-								<input type="hidden" value="0" name="pageHistory">
 								<div class="form-group">
 									<div class="eight columns offset-by-two">
 										<input class="button-primary block" type="submit" value="Submit">
@@ -167,7 +188,9 @@
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/parsley.min.js"></script>
 		<script>
+			// Scroll Effects
 			$(function() {
 				$('.scrolly').scrolly(2000);
 				
@@ -176,11 +199,20 @@
 					scroll: function(progress) {
 						var $this = $(this),
 							$panel = $this.find('.panel'),
+							$bg = $('.header-bg'),
 							x;
 						
-						// Opacity
+						// Decrease opacity of header text
 						x = 1 - progress;
 						$panel.css('opacity', Math.max(0, Math.min(1, x)));
+						
+						// Increase opacity of header background color
+						if (progress < 0.8) {
+							x = 0.6;
+						} else {
+							x = 0.4 * progress + 0.28;
+						}
+						$bg.css('opacity', x);
 					}
 				});
 				
@@ -196,38 +228,53 @@
 				});
 			});
 			
+			// Form Validation
+			$('#beta_signup_form').parsley();
+			
 			// Submit to Google Form
-            function postToGoogle() {
-                var first_name = $("#first_name").val();
-                var last_name = $("#last_name").val();
-                var email = $("#email").val();
-                var institution = $("#institution").val();
-                var academic_use = $("input[name='academic_use']:checked").val();
- 
-                $.ajax({
-                    url: "https://docs.google.com/forms/d/1xbo58QmCuJxCkVmACddkDgmRTk8HKw6KkEXYKG-MIy0/formResponse",
-                    data: {"entry.1574011833": first_name, "entry.1390056289": last_name, "entry.46580921": email, "entry.1291998846": institution, "entry.1033496190": academic_use},
-                    type: "POST",
-                    dataType: "xml",
-                    statusCode: {
-                        0: function() {
-                            //Success message
-                            window.location.replace("http://jwmay.github.io/chronusq-site/");
-                        },
-                        200: function() {
-                            //Success Message
-                            window.location.replace("http://jwmay.github.io/chronusq-site/");
-                        }
-                    }
-                });
-            }
+			function postToGoogle() {
+				var first_name = $("#first_name").val();
+				var last_name = $("#last_name").val();
+				var email = $("#email").val();
+				var institution = $("#institution").val();
+				var academic_use = $("input[name='academic_use']:checked").val();
+				
+				$.ajax({
+					url: "https://docs.google.com/forms/d/1xbo58QmCuJxCkVmACddkDgmRTk8HKw6KkEXYKG-MIy0/formResponse",
+					data: {"entry.1574011833": first_name, "entry.1390056289": last_name, "entry.46580921": email, "entry.1291998846": institution, "entry.1033496190": academic_use},
+					type: "POST",
+					dataType: "xml",
+					statusCode: {
+						0: function() {
+							//Success message
+							window.location.replace("http://jwmay.github.io/chronusq-site/");
+						},
+						200: function() {
+							//Success Message
+							window.location.replace("http://jwmay.github.io/chronusq-site/");
+						}
+					}
+				});
+			}
              
-            $(document).ready(function(){
-                $('#beta_signup_form').submit(function() {
-                    postToGoogle();
-                    return false;
-                });
-            });
+			$(document).ready(function(){
+				$('#beta_signup_form').submit(function() {
+					postToGoogle();
+					return false;
+				});
+				
+				// Responsive navigation
+				var $navbar = $('.navbar'),
+					$hamburger = $('.hamburger');
+
+				$hamburger.click(function() {
+					if ($navbar.hasClass('active')) {
+						$navbar.removeClass('active');
+					} else {
+						$navbar.addClass('active');
+					}
+				});				
+			});
 		</script>
 		
 	</body>
