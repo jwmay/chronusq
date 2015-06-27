@@ -129,7 +129,9 @@
 			<div class="panel">
 				<div class="container">
 					<h2>Beta Sign Up</h2>
-					<p class="lead">We are pleased to announce that the signup for Chronus Quantum beta testing is now open. All that request will be given access. To request access to the beta program, please complete the form below.</p>
+					<div id="form_description">
+						<p class="lead">We are pleased to announce that the signup for Chronus Quantum beta testing is now open. All that request will be given access. To request access to the beta program, please complete the form below.</p>
+					</div>
 					<div class="row">
 						<div class="ten columns offset-by-one">
 							<form class="form-horizontal form-group-large" id="beta_signup_form" target="_self" onsubmit="" action="" method="post">
@@ -170,7 +172,13 @@
 									</div>
 								</div>
 							</form>
-							<div class="result"></div>
+							<div id="form_success" class="hidden">
+								<div class="panel success">
+									<h4>Thank you for your interest in Chronus Quantum.</h4>
+									<p class="lead">Your request to access the beta version of Chronus Quantum has been received.  Check your email shortly for instructions on how to access the beta release of Chronus Quantum.</p>
+
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -235,6 +243,9 @@
 			
 			// Submit to Google Form
 			function postToGoogle() {
+				var form = $('#beta_signup_form');
+				var form_description = $('#form_description');
+				var form_success = $('#form_success');
 				var first_name = $("#first_name").val();
 				var last_name = $("#last_name").val();
 				var email = $("#email").val();
@@ -249,11 +260,16 @@
 					statusCode: {
 						0: function() {
 							//Success message
-							window.location.replace("http://jwmay.github.io/chronusq-site/");
+							form.addClass('hidden');
+							form_description.addClass('hidden');
+							form_success.removeClass('hidden');
 						},
 						200: function() {
 							//Success Message
-							window.location.replace("http://jwmay.github.io/chronusq-site/");
+// 							window.location.replace('http://jwmay.github.io/chronusq-site/');
+							form.addClass('hidden');
+							form_description.addClass('hidden');
+							form_success.removeClass('hidden');
 						}
 					}
 				});
@@ -265,16 +281,12 @@
 					return false;
 				});
 				
-				// Responsive navigation
+				// Mobile-friendly navigation
 				var $navbar = $('.navbar'),
 					$hamburger = $('.hamburger');
-
+					
 				$hamburger.click(function() {
-					if ($navbar.hasClass('active')) {
-						$navbar.removeClass('active');
-					} else {
-						$navbar.addClass('active');
-					}
+					$navbar.toggleClass('active');
 				});				
 			});
 		</script>

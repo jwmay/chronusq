@@ -257,6 +257,8 @@ blockquote {
 	.navbar-header a {
 		color: #fff;
 		text-decoration: none;
+		-webkit-transition: opacity 0.2s ease-in-out;
+		        transition: opacity 0.2s ease-in-out;
 	}
 	
 	.navbar-header a:hover,
@@ -322,8 +324,6 @@ blockquote {
 		.navbar-nav ul li {
 			margin: 0;
 			padding: 0;
-			-webkit-transition: background-color 0.2s ease-in-out;
-			        transition: background-color 0.2s ease-in-out;
 		}
 		
 		.navbar-nav ul li a {
@@ -332,6 +332,9 @@ blockquote {
 			border-bottom: 2px solid #333;
 			text-decoration: none;
 			color: #fff;
+			-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
 		}
 
 			.navbar-nav ul li a:hover,
@@ -373,8 +376,6 @@ blockquote {
 			.navbar-nav ul li {
 				display: inline-block;
 				margin-right: 1.2em;
-				-webkit-transition: color 0.2s ease-in-out;
-				        transition: color 0.2s ease-in-out;
 			}
 			
 			.navbar-nav ul li:last-child {
@@ -384,11 +385,14 @@ blockquote {
 			.navbar-nav ul li a {
 				background: none;
 				border-bottom: none;
+				-webkit-transition: opacity 0.2s ease-in-out;
+				        transition: opacity 0.2s ease-in-out;
 			}
 			
 				.navbar-nav ul li a:hover,
 				.navbar-nav ul li a:focus {
 					background: none;
+					color: #fff;
 					opacity: 0.9;
 				}
 }
@@ -586,6 +590,10 @@ input[type="radio"] {
 	width: 100%;
 }
 
+.hidden {
+	display: none;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -597,6 +605,14 @@ input[type="radio"] {
 	margin: 2em 0;
 }
 
+.success {
+	background-color: #eee;
+	padding: 2em;
+}
+	
+	.success p {
+		margin: 0;
+	}
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
