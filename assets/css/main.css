@@ -671,7 +671,6 @@ input[type="radio"] {
 	.header .panel {
 		margin-top: 0;
 		padding: 10em 0;
-/* 		background-color: rgba(0,0,0,0.6); */
 		text-align: center;
 		color: #fff;
 		height: 100%;
@@ -691,10 +690,10 @@ input[type="radio"] {
 }
 
 /* For tablets and smaller */
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
 
 	.header .panel {
-		padding: 60px 0;
+		padding: 8em 0;
 	}
 
 	.header img {
