@@ -17,7 +17,7 @@
 		<nav class="navbar">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="#">
+					<a class="scrolly" href="#top">
 						<img src="assets/img/chronus_quantum_logo_icon_white.png">Chronus Quantum
 					</a>
 					<div class="hamburger">
@@ -28,16 +28,16 @@
 				</div>
 				<div class="navbar-nav">
 					<ul>
-						<li><a href="#about">About</a></li>
-						<li><a href="#features">Features</a></li>
-						<li><a href="#beta_form">Beta Sign-up</a></li>
+						<li><a class="scrolly" href="#about">About</a></li>
+						<li><a class="scrolly" href="#features">Features</a></li>
+						<li><a class="scrolly" href="#beta_form">Beta Sign-up</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		
 		<!-- HEADER SECTION -------------------->
-		<header class="header">
+		<header class="header" id="top">
 			<div class="header-bg"></div>
 			<div class="panel">
 				<div class="container">
@@ -80,37 +80,69 @@
 			<div class="panel">
 				<div class="container">
 					<h2 class="rule light-rule">Features</h2>
-					<p class="lead">These are the features of Chronus Quantum!</p>
+					<p class="lead">The beta release of Chronus Quantum will ship with many great features.  New features will be added as we work towards a release version.  A list of current and soon-to-come features are listed below.</p>
 					
-					<div class="media">
-						<div class="media-left">
-							<i class="fa fa-code fa-5x fa-fw"></i>
+					<div class="row">
+						<div class="four columns">
+							<div class="media">
+								<div class="media-top">
+									<i class="fa fa-check-square-o fa-5x fa-fw"></i>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Current</h4>
+									<ul>
+										<li>RHF SCF (w CDIIS)</li>
+										<li>UHF SCF (w CDIIS)</li>
+										<li>RHF Real-Time Propagation</li>
+										<li>In-core integral Davidson CIS</li>
+										<li>Direct Davidson CIS</li>
+										<li>Dipole, Quadrupole and Octopole Moments (Ground State)</li>
+										<li>Oscillator strengths CIS (Dipole)</li>
+										<li>Read Guess from Gaussian fchk</li>
+										<li>Read Guess from Unformatted Gaussian Matrix Element File</li>
+										<li>In-core Davidson  TDHF</li>
+										<li>Direct Davidson TDHF</li>
+										<li>Oscillator strengths TDHF (Dipole)</li>
+										<li>CUHF SCF</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<div class="media-body">
-							<h4 class="media-heading">Feature 1</h4>
-							<p class="lead">Details about feature 1.</p>
-						</div>
-					</div>
-					
-					<div class="media">
-						<div class="media-left">
-							<i class="fa fa-file-code-o fa-5x fa-fw"></i>
-						</div>
-						<div class="media-body">
-							<h4 class="media-heading">Feature 2</h4>
-							<p class="lead">Details about feature 2.</p>
-						</div>
-					</div>
 
-					<div class="media">
-						<div class="media-left">
-							<i class="fa fa-desktop fa-5x fa-fw"></i>
+						<div class="four columns">
+							<div class="media">
+								<div class="media-top">
+									<i class="fa fa-code fa-5x fa-fw"></i>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Coming Soon</h4>
+									<ul>
+										<li>UHF Real-Time Propagation</li>
+										<li>SAD Guess</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<div class="media-body">
-							<h4 class="media-heading">Feature 3</h4>
-							<p class="lead">Details about feature 3.</p>
+						
+						<div class="four columns">
+							<div class="media">
+								<div class="media-top">
+									<i class="fa fa-list fa-5x fa-fw"></i>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Not-Too-Distant Future</h4>
+									<ul>
+										<li>Standard Frequency Dependent Linear Response</li>
+										<li>Damped Frequency Dependent Linear Response</li>
+										<li>In-core integral pp-RPA</li>
+										<li>Direct pp-RPA</li>
+										<li>EDIIS</li>
+										<li>CUHF CDIIS / EDIIS</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-					</div>					
+					</div>
 					
 					<div class="row">
 						<div class="four columns offset-by-four">
@@ -227,55 +259,52 @@
 				});
 				
 				$('section').scrollex({
-				  top: '-75%',
-				  bottom: '50%',
-				  scroll: function(progress) {
-				
-				    // Progressively increase #foobar's opacity as we scroll through it.
-				      $(this).css('opacity', Math.max(0, Math.min(1, progress)));
-				
-				  }
-				});
-			});
-			
-			// Form Validation
-			$('#beta_signup_form').parsley();
-			
-			// Submit to Google Form
-			function postToGoogle() {
-				var form = $('#beta_signup_form');
-				var form_description = $('#form_description');
-				var form_success = $('#form_success');
-				var first_name = $("#first_name").val();
-				var last_name = $("#last_name").val();
-				var email = $("#email").val();
-				var institution = $("#institution").val();
-				var academic_use = $("input[name='academic_use']:checked").val();
-				
-				$.ajax({
-					url: "https://docs.google.com/forms/d/1xbo58QmCuJxCkVmACddkDgmRTk8HKw6KkEXYKG-MIy0/formResponse",
-					data: {"entry.1574011833": first_name, "entry.1390056289": last_name, "entry.46580921": email, "entry.1291998846": institution, "entry.1033496190": academic_use},
-					type: "POST",
-					dataType: "xml",
-					statusCode: {
-						0: function() {
-							//Success message
-							form.addClass('hidden');
-							form_description.addClass('hidden');
-							form_success.removeClass('hidden');
-						},
-						200: function() {
-							//Success Message
-// 							window.location.replace('http://jwmay.github.io/chronusq-site/');
-							form.addClass('hidden');
-							form_description.addClass('hidden');
-							form_success.removeClass('hidden');
-						}
+					top: '-75%',
+					bottom: '50%',
+					scroll: function(progress) {
+						// Progressively increase a section's opacity as we scroll through it.
+						$(this).css('opacity', Math.max(0, Math.min(1, progress)));
 					}
 				});
-			}
-             
-			$(document).ready(function(){
+			
+				// Form Validation
+				$('#beta_signup_form').parsley();
+			
+				// Submit to Google Form
+				function postToGoogle() {
+					var form = $('#beta_signup_form');
+					var form_description = $('#form_description');
+					var form_success = $('#form_success');
+					
+					// Form Input Variables
+					var first_name = $("#first_name").val();
+					var last_name = $("#last_name").val();
+					var email = $("#email").val();
+					var institution = $("#institution").val();
+					var academic_use = $("input[name='academic_use']:checked").val();
+					
+					$.ajax({
+						url: "https://docs.google.com/forms/d/1xbo58QmCuJxCkVmACddkDgmRTk8HKw6KkEXYKG-MIy0/formResponse",
+						data: {"entry.1574011833": first_name, "entry.1390056289": last_name, "entry.46580921": email, "entry.1291998846": institution, "entry.1033496190": academic_use},
+						type: "POST",
+						dataType: "xml",
+						statusCode: {
+							0: function() {
+								//Success message
+								form.addClass('hidden');
+								form_description.addClass('hidden');
+								form_success.removeClass('hidden');
+							},
+							200: function() {
+								//Success Message
+								form.addClass('hidden');
+								form_description.addClass('hidden');
+								form_success.removeClass('hidden');
+							}
+						}
+					});
+				};
+
 				$('#beta_signup_form').submit(function() {
 					postToGoogle();
 					return false;
@@ -287,7 +316,12 @@
 					
 				$hamburger.click(function() {
 					$navbar.toggleClass('active');
-				});				
+				});
+				
+				$('.navbar-nav').find('a').click(function() {
+					$navbar.removeClass('active');
+				});
+			
 			});
 		</script>
 		
