@@ -306,7 +306,7 @@ ol {
 	
 	.navbar-header a:hover,
 	.navbar-header a:focus {
-		opacity: 0.9;
+		opacity: 0.7;
 	}
 
 .hamburger {
@@ -436,7 +436,7 @@ ol {
 				.navbar-nav ul li a:focus {
 					background: none;
 					color: #fff;
-					opacity: 0.9;
+					opacity: 0.7;
 				}
 }
 
