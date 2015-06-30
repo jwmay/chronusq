@@ -238,9 +238,7 @@
 				</div>
 			</div>
 		</footer>
-		
-		<div class="progress" style="position: fixed; top:0; left:0; color: white; z-index: 1000;">PROGRESS</div>
-		
+
 		<!-- SCRIPTS -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -277,7 +275,6 @@
 					top: '-75%',
 					bottom: '50%',
 					scroll: function(progress) {
-						$('.progress').text(Math.max(0, Math.min(1, progress)));
 						// Progressively increase a section's opacity as we scroll through it.
 						$(this).css('opacity', Math.max(0, Math.min(1, progress)));
 					}
