@@ -83,7 +83,7 @@
 					<p class="lead">The beta release of Chronus Quantum will ship with many great features.  New features will be added as we work towards a release version.  A list of current and soon-to-come features are listed below.</p>
 					
 					<div class="row">
-						<div class="four columns">
+						<div class="three columns">
 							<div class="media">
 								<div class="media-top">
 									<i class="fa fa-check-square-o fa-5x fa-fw"></i>
@@ -91,59 +91,72 @@
 								<div class="media-body">
 									<h4 class="media-heading">Current</h4>
 									<ul>
-										<li>RHF SCF (w CDIIS)</li>
-										<li>UHF SCF (w CDIIS)</li>
+										<li>Restricted Hartree-Fock (RHF)</li>
+										<li>Unrestricted Hartree-Fock (UHF)</li>
+										<li>Constrained Unrestricted Hartree-Fock (CUHF)</li>
+										<li>Commutator Direct Inversion in an Iterative Subspace (CDIIS) Optimization Accelleration</li>
 										<li>RHF Real-Time Propagation</li>
-										<li>In-core integral Davidson CIS</li>
-										<li>Direct Davidson CIS</li>
-										<li>Dipole, Quadrupole and Octopole Moments (Ground State)</li>
-										<li>Oscillator strengths CIS (Dipole)</li>
-										<li>Read Guess from Gaussian fchk</li>
-										<li>Read Guess from Unformatted Gaussian Matrix Element File</li>
-										<li>In-core Davidson  TDHF</li>
-										<li>Direct Davidson TDHF</li>
-										<li>Oscillator strengths TDHF (Dipole)</li>
-										<li>CUHF SCF</li>
+										<li>UHF Real-Time Propagation</li>
+										<li>Configuration Interaction Singles (CIS)</li>
+										<li>Particle-Hole Random Phase Approximation (ph-RPA / TDHF)</li>
+										<li>Ground State Multipole Moments</li>
+										<li>Excited State Multipole Moments</li>
+										<li>Oscillator Strengths (within the Dipole Approximation)</li>
 									</ul>
 								</div>
 							</div>
 						</div>
 
-						<div class="four columns">
+						<div class="three columns">
 							<div class="media">
 								<div class="media-top">
 									<i class="fa fa-code fa-5x fa-fw"></i>
 								</div>
 								<div class="media-body">
-									<h4 class="media-heading">Coming Soon</h4>
+									<h4 class="media-heading">Soon</h4>
 									<ul>
-										<li>UHF Real-Time Propagation</li>
-										<li>SAD Guess</li>
+										<li>Superposition of Atomic Densities Initial SCF Guess</li>
+										<li>Harris Functional SCF Guess</li>
 									</ul>
 								</div>
 							</div>
 						</div>
 						
-						<div class="four columns">
+						<div class="three columns">
 							<div class="media">
 								<div class="media-top">
 									<i class="fa fa-list fa-5x fa-fw"></i>
 								</div>
 								<div class="media-body">
-									<h4 class="media-heading">Not-Too-Distant Future</h4>
+									<h4 class="media-heading">Eventually</h4>
 									<ul>
 										<li>Standard Frequency Dependent Linear Response</li>
 										<li>Damped Frequency Dependent Linear Response</li>
-										<li>In-core integral pp-RPA</li>
-										<li>Direct pp-RPA</li>
-										<li>EDIIS</li>
-										<li>CUHF CDIIS / EDIIS</li>
+										<li>Particle-Particle Random Phase Approximation (pp-RPA)</li>
+										<li>Energy DIIS (EDIIS) Optimization Accelleration</li>
+										<li>Generalized Hartree-Fock (GHF / Two-Component Spinor)</li>
+										<li>GHF Real-Time Propagation</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="three columns">
+							<div class="media">
+								<div class="media-top">
+									<i class="fa fa-desktop fa-5x fa-fw"></i>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Interfaces</h4>
+									<ul>
+										<li>Ability to utilize Gaussian Formatted Checkpoint (FCHK) files</li>
+										<li>Ability to utilize Gaussian Unformatted Raw Matrix Element files</li>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="row">
 						<div class="four columns offset-by-four">
 							<div class="nav-btn">
@@ -226,6 +239,8 @@
 			</div>
 		</footer>
 		
+		<div class="progress" style="position: fixed; top:0; left:0; color: white; z-index: 1000;">PROGRESS</div>
+		
 		<!-- SCRIPTS -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -262,6 +277,7 @@
 					top: '-75%',
 					bottom: '50%',
 					scroll: function(progress) {
+						$('.progress').text(Math.max(0, Math.min(1, progress)));
 						// Progressively increase a section's opacity as we scroll through it.
 						$(this).css('opacity', Math.max(0, Math.min(1, progress)));
 					}
