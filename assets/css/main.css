@@ -193,8 +193,16 @@ input[type="reset"] {
 	.media-body {
 		display: inline-block;
 		vertical-align: middle;
-		max-width: 65%;
 		width: auto; 
+	}
+	
+	.media-left + .media-body,
+	.media-right + .media-body {
+		max-width: 65%;
+	}
+	
+	.media-top + .media-body {
+		max-width: 100%;
 	}
 }
 
