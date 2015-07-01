@@ -83,18 +83,18 @@
 					<p class="lead">The beta release of Chronus Quantum will ship with many great features.  New features will be added as we work towards a release version.  A list of current and soon-to-come features are listed below.</p>
 					
 					<div class="row">
-						<div class="three columns">
+						<div class="ten columns offset-by-one">
 							<div class="media">
 								<div class="media-top">
 									<i class="fa fa-check-square-o fa-5x fa-fw"></i>
 								</div>
 								<div class="media-body">
 									<h4 class="media-heading">Current</h4>
-									<ul>
+									<ul class="lead">
 										<li>Restricted Hartree-Fock (RHF)</li>
 										<li>Unrestricted Hartree-Fock (UHF)</li>
 										<li>Constrained Unrestricted Hartree-Fock (CUHF)</li>
-										<li>Commutator Direct Inversion in an Iterative Subspace (CDIIS) Optimization Accelleration</li>
+										<li>Commutator Direct Inversion in an Iterative Subspace (CDIIS) Optimization Acceleration</li>
 										<li>RHF Real-Time Propagation</li>
 										<li>UHF Real-Time Propagation</li>
 										<li>Configuration Interaction Singles (CIS)</li>
@@ -107,14 +107,14 @@
 							</div>
 						</div>
 
-						<div class="three columns">
+						<div class="ten columns offset-by-one">
 							<div class="media">
 								<div class="media-top">
 									<i class="fa fa-code fa-5x fa-fw"></i>
 								</div>
 								<div class="media-body">
-									<h4 class="media-heading">Soon</h4>
-									<ul>
+									<h4 class="media-heading">Coming Soon</h4>
+									<ul class="lead">
 										<li>Superposition of Atomic Densities Initial SCF Guess</li>
 										<li>Harris Functional SCF Guess</li>
 									</ul>
@@ -122,35 +122,37 @@
 							</div>
 						</div>
 						
-						<div class="three columns">
+						<div class="ten columns offset-by-one">
 							<div class="media">
 								<div class="media-top">
 									<i class="fa fa-list fa-5x fa-fw"></i>
 								</div>
 								<div class="media-body">
-									<h4 class="media-heading">Eventually</h4>
-									<ul>
+									<h4 class="media-heading">In the Works</h4>
+									<ul class="lead">
 										<li>Standard Frequency Dependent Linear Response</li>
 										<li>Damped Frequency Dependent Linear Response</li>
 										<li>Particle-Particle Random Phase Approximation (pp-RPA)</li>
-										<li>Energy DIIS (EDIIS) Optimization Accelleration</li>
-										<li>Generalized Hartree-Fock (GHF / Two-Component Spinor)</li>
+										<li>Energy DIIS (EDIIS) Optimization Acceleration</li>
+										<li>Two-Component Spinors (TCS) and GHS Real-Time propagation to TCS Real-Time Propagation</li>
 										<li>GHF Real-Time Propagation</li>
 									</ul>
 								</div>
 							</div>
 						</div>
 
-						<div class="three columns">
+						<div class="ten columns offset-by-one">
 							<div class="media">
 								<div class="media-top">
 									<i class="fa fa-desktop fa-5x fa-fw"></i>
 								</div>
 								<div class="media-body">
 									<h4 class="media-heading">Interfaces</h4>
-									<ul>
+									<ul class="lead">
 										<li>Ability to utilize Gaussian Formatted Checkpoint (FCHK) files</li>
 										<li>Ability to utilize Gaussian Unformatted Raw Matrix Element files</li>
+										<li><strong>COMING SOON:</strong> Interface to Psi4</li>
+										<li><strong>COMING SOON:</strong> Interface to TURBOMOLE</li>
 									</ul>
 								</div>
 							</div>
@@ -271,7 +273,7 @@
 					}
 				});
 				
-				$('section').scrollex({
+				$('Xsection').scrollex({
 					top: '-75%',
 					bottom: '50%',
 					scroll: function(progress) {
