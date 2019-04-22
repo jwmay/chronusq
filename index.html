@@ -82,9 +82,30 @@
 			<div class="panel">
 				<div class="container">
 					<h2 class="rule light-rule">Features</h2>
-					<p class="lead">The beta release of Chronus Quantum will ship with many great features.  New features will be added as we work towards a release version.  A list of current and soon-to-come features are listed below.</p>
+                    <p class="lead">The beta 0.2 release of Chronus Quantum is now available. For a full list of functionality, features and examples, please check out the Wiki hosted on our GitLab server <a href="https://urania.chem.washington.edu/chronusq/chronusq_public/wikis/home">here.</a></p>
 					
-					<div class="row">
+                        <div class="row">
+						<div class="ten columns offset-by-one">
+							<div class="media">
+								<div class="media-top">
+									<i class="fa fa-check-square-o fa-5x fa-fw"></i>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Highlighted Capabilities</h4>
+									<ul class="lead">
+										<li>Native Complex Arithmetic</li>
+										<li>Restricted, Unrestricted, and Generalized Hartree-Fock/DFT references</li>
+										<li>Relativistic Calculations within the eXact 2-Component (X2C) Framework</li>
+										<li>Gauge Including Atomic Orbitals (GIAOs) for Magnetic Field Effects</li>
+										<li>Real-Time TDHF/TDDFT</li>
+										<li>Linear Response TDHF/TDDFT</li>
+										<li>Support for MPI and SMP parallelism</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					    <!--
+                        <div class="row">
 						<div class="ten columns offset-by-one">
 							<div class="media">
 								<div class="media-top">
@@ -93,7 +114,7 @@
 								<div class="media-body">
 									<h4 class="media-heading">Current</h4>
 									<ul class="lead">
-										<li>Restricted Hartree-Fock (RHF).</li>
+										<li>Restricted Hartree-Fock (RHF)..</li>
 										<li>Unrestricted Hartree-Fock (UHF)</li>
 										<li>Constrained Unrestricted Hartree-Fock (CUHF)</li>
 										<li>Commutator Direct Inversion in an Iterative Subspace (CDIIS) Optimization Acceleration</li>
@@ -176,6 +197,7 @@
 							</div>
 						</div>
 					</div>
+                    -->
 
 					<div class="row">
 						<div class="four columns offset-by-four">
@@ -197,29 +219,30 @@
 				<div class="container">
 					<h2>Get the Beta Version!</h2>
 					<p class="lead">
-						We are pleased to announce that the Beta version of Chronus Quantum is now available on
-						<a href=http://www.github.com/liresearchgroup/chronusq_public>GitHub</a>. All
+						We are pleased to announce that the Beta version of Chronus Quantum is now available on our
+						<a href=https://urania.chem.washington.edu/chronusq/chronusq_public>GitLab server</a>. All
 						are encouraged to obtain a copy of the code to aid in the open source, community-driven
-						development of the Chronus Quantum software package.
+						development of the Chronus Quantum software package. Currently Chronus Quantum only supports builds 
+                        on GNU/Linux systems with GNU and Intel compilers.
 					</p>
 
-					<p class="lead">
-						To obtain a copy of the code, please go to the <a href=http://www.github.com/liresearchgroup>Li Research Group GitHub Page</a>
+					<!-- <p class="lead">
+						To obtain a copy of the code, please go to the <a href=https://urania.chem.washington.edu/chronusq/chronusq_public>Chronus Quantum GitLab Page</a>
 						to obtain a git clone link or download the tar file under the releases tag. Currently
-						Chronus Quantum only supports builds on GNU/Linux systems with the GNU compiler suite.
-						Other build combinations (such as OSX or Intel Compilers) have not been tested and will
-						not be supported by the developers at this time. 
-					</p>
+						Chronus Quantum only supports builds on GNU/Linux systems with the GNU and Intel compiler suite.
+                    </p> -->
 
 					<h3>Cloning Chronus Quantum From The Command Line</h3>
 					<p class="lead">
-						To clone the Chronus Quantum GitHub Repository, you may use the following command
-						on a GNU/Linux machine with git installed:
+						To clone the Chronus Quantum public repository, you can use the following command:
 						<div class="code">
 							<code class="language-cpp">
-								> git clone http://www.github.com/liresearchgroup/chronusq_public.git
+							    $ git clone https://urania.chem.washington.edu/chronusq/chronusq_public
 							</code>
 						</div>
+					</p>
+					<p class="lead">
+						
 					</p>
 				</div>
 			</div>
@@ -292,7 +315,7 @@
 		<footer class="footer">
 			<div class="inner">
 				<div class="container">
-					<p class="small">&copy; 2015 Chronus Quantum</p>
+					<p class="small">&copy; 2019 Chronus Quantum</p>
 				</div>
 			</div>
 		</footer>
@@ -305,7 +328,7 @@
 		<script>
 			// Scroll Effects
 			$(function() {
-				$('.scrolly').scrolly(2000);
+				$('.scrolly').scrolly(700);
 				
 				$('.header').scrollex({
 					top: '50vh',
